@@ -75,4 +75,56 @@
         wishlistInput.value = "";
 
     });
+    
+    // Task 3. Form Handling with validation feedback
+  let contactForm = document.querySelector("#contact-form");
+  let formFeedback = document.querySelector("#form-feedback");
+   
+  // event handling the contactform 
+  contactForm.addEventListener("submit", event => {
+    // prevent the form from being submitted automatically
+    event.preventDefault();
+
+    //obtain the client's input
+    let nameInput = document.querySelector("#client-name");
+    let emailInput = document.querySelector("#client-email");
+    let inquiryInput = document.querySelector("#inquiry");
+
+    //read the user's input
+    let name = nameInput.value;
+    let email = emailInput.value;
+    let inquiry = inquiryInput.value;
+
+    //Validating the user's input using if-conditional statements
+    if(name === ""){
+        formFeedback.innerHTML = "<b> Submission Failed: </b> Please enter your name."
+        formFeedback.className = "feedback-msg feedback error";
+    }
+
+    if(email === "" || !email.includes("@")){
+        formFeedback.innerHTML = "<b> Submission Failed: </b> Please enter a valid email address containing '@'."
+        formFeedback.className = "feedback-msg feedback error";
+    }
+
+    if(inquiry === ""){
+        formFeedback.innerHTML = "<b> Submission Failed: </b> Please write your inquiry."
+        formFeedback.className = "feedback-msg feedback error";
+    }
+
+    //update div (formFeedback) with the values
+    formFeedback.innerHTML =
+    "<b> Inquiry Submitted! </b> </br>" +
+    "<p> Name: " + name + "</p>" +
+    "<p> Email: " + email + "</p>" +
+    "<p> Inquiry: " + inquiry + "</p>" ;
+
+    //clearing form input fields
+    nameInput.value = "";
+    emailInput.value = "";
+    inquiryInput.value = "";
+
+    //the success message
+    formFeedback.className = "feedback-msg feedback-success";
+
+  });
  }

@@ -1,0 +1,19 @@
+1. Loop-rendered Dynamic Content 
+- adjusting the html document to enable dynamic creation of the images in an array and looping them using javascript
+- adding css style to the adjusted document
+- in js using forEach() to loop through the array of images and add html structure to them
+
+2. Dynamically adding & removing elements(wishlist style interaction)
+- wishlist items are destinations the user would like to photograph next
+- I added html code to suit the required task and created a div with an empty ul which will contain list items created using javascript
+- Added css to style the adjusted html 
+- Using javascript the add & remove buttons' click events were handled and list items were created for the user to add the required input
+
+3. Form Handling and validation feedback
+- adding html code to have a form containing client information and their inquiry as well as a div containing the feedback for the submitted output
+- styling  the form using css
+- form handling using an eventlistener in javascipt for the submit event and preventDefalt() to prevent the user's input from disappearing
+- obtaining the input and displaying it after the user submits (obtained input using .value and feedback/inquiry displayed with .innerHTML)
+- Feedback (inquiry) is validated using if-conditional statements
+- the feedback message(feedback-msg) when submission is successful is added using javascript 
+

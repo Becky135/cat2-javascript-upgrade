@@ -427,3 +427,118 @@ body {
   .remove-item-btn :hover{
     background-color: #a33636;
   }
+
+  /*Form handling styling layout (task 3)*/
+  .section-contact{
+    padding: 60px 0;
+    background-color: #ac9371;
+    border-top: 1px solid #eee;
+  }
+
+  .section-label{
+    color: #1e332a;
+  }
+
+
+  h3{
+    color: #5a4a38;
+  }
+
+  .contact-instructions {
+    font-size: 1rem;
+    color: #efe6e6;
+    margin-bottom: 24px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+/* Spacing out each input field pair cleanly */
+.form-group {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #2e4a3e; /* Uses your deep forest accent green color */
+}
+
+/* Grouping the text fields and text area boxes */
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 1rem;
+    background-color: #fdfdfd;
+    width: 100%;
+    box-sizing: border-box; /* Prevents input boxes from spilling out of container borders */
+}
+
+/* Hover highlights for active user focus */
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #2e4a3e;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* The form submit button matching the theme */
+#submit-form-btn {
+    background-color: #2e4a3e; 
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    margin-top: 6px;
+}
+
+/* The base feedback box wrapper layout */
+.feedback-msg {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    display: none; /* Keeps it completely hidden until Javascript assigns a state */
+}
+
+/* Applied when a validation check fails */
+.feedback-error {
+    display: block;
+    background-color: #fce8e6;
+    color: #a83232;
+    border: 1px solid #f5c2be;
+}
+
+/* Applied when the layout passes verification successfully */
+.feedback-success {
+    display: block;
+    background-color: #e6f4ea;
+    color: #137333;
+    border: 1px solid #c2e7cc;
+}
+
+/* Styles layout parameters for the summary lists inside the green success output bubble */
+.feedback-success p {
+    margin: 6px 0 0 0;
+    font-size: 0.95rem;
+    color: #2b2b2b;
+}
