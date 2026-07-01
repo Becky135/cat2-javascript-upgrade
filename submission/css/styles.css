@@ -356,3 +356,74 @@ body {
         grid-column: span 2;
     }
   }
+
+  /*Wishlist styling layout(task 2)*/
+  .section-wishlist{
+    padding: 60px 0;
+    background-color: #faf8f5;
+    border-top: 1px solid #eee;
+  }
+
+  .wishlist-instructions{
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  #wishlist-input{
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    font-family: 'Instrument Sans', serif;
+    font-size: 1rem;
+  }
+
+  #add-wishlist-button{
+    background-color: #78eab9;
+    color: rgb(7, 46, 24);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  #add-wishlist-button :hover{
+    background-color: #1e332a;
+  }
+
+  #wishlist-list{
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+  }
+
+  .wishlist-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: white;
+    border: 1px solid #eaeaea;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .remove-item-btn{
+    background-color: #c94a4a;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+
+  .remove-item-btn :hover{
+    background-color: #a33636;
+  }

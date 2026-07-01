@@ -33,3 +33,46 @@
         itemsContainer.appendChild(photoCard);
     });
  }
+
+ //Task 2. Dynamically adding & removing elements
+ //selecting input field, add button and the empty target list
+ const wishlistInput = document.getElementById("wishlist-input");
+ const addWishlistBtn = document.getElementById("add-wishlist-btn");
+ const wishlistList = document.getElementById("wishlist-list");
+
+ //event handling for 'Add Destination' button
+ if(addWishlistBtn && wishlistInput && wishlistList){
+    addWishlistBtn.addEventListener("click", event => {
+        event.preventDefault(); //stops the added input from disappearing
+        //getting the text input from the user
+        const textValue = wishlistInput.value;
+
+        //validating to ensure the input field is not empty
+        if(textValue == ""){
+            alert("Please type a location name first!");
+        }
+
+        // Creating a new list item (<li>) using createElement
+        const li = document.createElement("li");
+        li.className = "wishlist-item";
+        li.textContent = textValue; // this sets the item text to the user's input
+
+        //Creating the remove button for this item
+        const removeBtn = document.createElement("button");
+        removeBtn.className = "remove-item-btn";
+        removeBtn.textContent = "Remove";
+
+        //event Handling the remove button
+        removeBtn.addEventListener("click", event => {
+            li.remove(); // removes the specific li element from the page
+        });
+
+        //connecting remove button to the list item, then appending li to the main unordered list
+        li.appendChild(removeBtn);
+        wishlistList.appendChild(li);
+
+        //resetting input text field to empty for next input entry
+        wishlistInput.value = "";
+
+    });
+ }
