@@ -10,7 +10,7 @@
         name: "Morning Light",
         image: "https://i.pinimg.com/736x/6c/57/37/6c5737b74f944ca638cc6da18a8b90cd.jpg"
     }
- ]
+ ];
 
  //Selecting the container element from html document
  const itemsContainer = document.getElementById("dynamic-items-container");
@@ -75,41 +75,44 @@
         wishlistInput.value = "";
 
     });
-    
+ }
     // Task 3. Form Handling with validation feedback
   let contactForm = document.querySelector("#contact-form");
   let formFeedback = document.querySelector("#form-feedback");
-   
+  let nameInput = document.querySelector("#client-name");
+  let emailInput = document.querySelector("#client-email");
+  let inquiryInput = document.querySelector("#inquiry"); 
+
   // event handling the contactform 
   contactForm.addEventListener("submit", event => {
     // prevent the form from being submitted automatically
     event.preventDefault();
-
-    //obtain the client's input
-    let nameInput = document.querySelector("#client-name");
-    let emailInput = document.querySelector("#client-email");
-    let inquiryInput = document.querySelector("#inquiry");
 
     //read the user's input
     let name = nameInput.value;
     let email = emailInput.value;
     let inquiry = inquiryInput.value;
 
+
     //Validating the user's input using if-conditional statements
     if(name === ""){
         formFeedback.innerHTML = "<b> Submission Failed: </b> Please enter your name."
         formFeedback.className = "feedback-msg feedback error";
+        return;
     }
 
     if(email === "" || !email.includes("@")){
         formFeedback.innerHTML = "<b> Submission Failed: </b> Please enter a valid email address containing '@'."
         formFeedback.className = "feedback-msg feedback error";
+        return;
     }
 
     if(inquiry === ""){
         formFeedback.innerHTML = "<b> Submission Failed: </b> Please write your inquiry."
         formFeedback.className = "feedback-msg feedback error";
+        return;
     }
+
 
     //update div (formFeedback) with the values
     formFeedback.innerHTML =
@@ -127,4 +130,34 @@
     formFeedback.className = "feedback-msg feedback-success";
 
   });
- }
+ 
+
+  //Task 4: Persistent state with LocalStorage
+    //restoring data from local storage when page loads
+ document.addEventListener("DOMContentLoaded", event => {
+    let savedName = localStorage.getItem('draft_name');
+    let savedEmail = localStorage.getItem('draft_email');
+    
+
+    if(nameInput && savedName) nameInput.value = savedName;
+    if(emailInput && savedEmail)emailInput.value = savedEmail;
+    
+});
+
+// Save data to localstorage automatically as the user types
+if(nameInput){
+ nameInput.addEventListener('input', event => {
+    localStorage.setItem('draft_name', nameInput.value);
+});
+}
+
+if(emailInput){
+emailInput.addEventListener('input', event => {
+    localStorage.setItem('draft_email', emailInput.value);
+});
+}
+
+
+
+
+
