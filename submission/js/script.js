@@ -157,6 +157,16 @@ emailInput.addEventListener('input', event => {
 });
 }
 
+// Task 5. Click to reveal banner section feature
+const bannerImage = document.getElementById("banner-image");
+const bannerCaption = document.getElementById("banner-caption");
+
+if (bannerImage && bannerCaption) {
+    bannerImage.addEventListener("click", () => {
+        // Toggles the 'hidden' visibility helper class on click
+        bannerCaption.classList.toggle("hidden");
+    });
+}
 
 
 

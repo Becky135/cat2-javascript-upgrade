@@ -49,8 +49,9 @@ body {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--sage);
+  color: rgba(225, 215, 196, 0.966);
   margin-bottom: 0.75rem;
+
 }
 
 /* ── HEADER ── */
@@ -168,6 +169,7 @@ body {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3.5vw + 0.5rem, 3rem);
   font-weight: 400;
+  color: #dcc4a9;
   margin-bottom: 1rem;
 }
 
@@ -182,7 +184,7 @@ body {
 
 .section-about p {
   max-width: 58ch;
-  color: #594b3a;
+  color: #f1bf81e9;
   font-size: 1.1em;
 }
 
@@ -239,6 +241,26 @@ body {
 }
 
 .photo-card:hover figcaption { transform: translateY(0); }
+
+/* Banner Reveal Layout Styling */
+.banner-container {
+    position: relative;
+    text-align: center;
+}
+
+.banner-caption {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #e4bb7ddd;
+    border-left: 4px solid #ad7634;
+    transition: all 0.3s ease-in-out;
+}
+
+/* The toggle utility class */
+.hidden {
+    display: none;
+}
+
 
 /* ── PLACEHOLDERS ── */
 .photo-card--placeholder {

@@ -17,8 +17,12 @@
 - Feedback (inquiry) is validated using if-conditional statements
 - the feedback message(feedback-msg) when submission is successful is added using javascript 
 
-4. Persistent state with localstorage
+4. Persistent state with localStorage
 - the user's email and name in the contact form section have been stored in the browser's memory
 - when pageload happens and the user types their name the name appears and they can click on it plus their email and add a new inquiry
-- this was done using if statements, localstorage and DOMContentloaded event handling
+- this was done using if statements, localStorage and DOMContentloaded event handling
 - no added html or css
+
+5. Click to reveal banner section feature
+- using the bannner-image and banner-caption id's, the click event holds the toggle feature that the caption will be revealed or hidden
+- this was done with classList.toggle()
